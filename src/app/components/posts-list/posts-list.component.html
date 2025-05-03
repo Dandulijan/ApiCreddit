@@ -1,0 +1,6 @@
+<div style="display: flex; gap: 30px">
+  @for (p of posts ; track p.id) {
+  <app-post-card [post]="p"></app-post-card>
+
+  }
+</div>

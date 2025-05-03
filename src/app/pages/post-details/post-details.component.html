@@ -1,0 +1,80 @@
+<div
+  style="
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <div
+    style="
+      border: 1px solid black;
+      border-radius: 8px;
+      width: 70%;
+      height: 70%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      /* justify-content: center;
+      align-items: center; */
+    "
+  >
+    <a
+      [routerLink]="['/posts']"
+      style="
+        padding: 8px 16px;
+        background-color: #09bc8aff; /* blue-500 */
+        color: white;
+        border: none;
+        border-radius: 10xpx;
+        cursor: pointer;
+        font-weight: 600;
+        align-items: center;
+        transition: background-color 0.3s;
+      "
+      onmouseover="this.style.backgroundColor='#004346ff';"
+      onmouseout="this.style.backgroundColor='#09bc8aff';"
+      >back</a
+    >
+    <h1 style="margin-top: 0; font-size: 34px; color: #333; text-align: center">
+      {{ Posts$()?.title }}
+    </h1>
+    <p
+      style="font-size: 20px; color: #666; line-height: 1.5; text-align: center"
+    >
+      {{ Posts$()?.description }}
+    </p>
+    <a
+      style="
+        padding: 8px 16px;
+        background-color: #09bc8aff; /* blue-500 */
+        color: white;
+        border: none;
+        border-radius: 10xpx;
+        cursor: pointer;
+        font-weight: 600;
+        align-items: center;
+        transition: background-color 0.3s;
+      "
+      onmouseover="this.style.backgroundColor='#004346ff';"
+      onmouseout="this.style.backgroundColor='#09bc8aff';"
+    >
+      Delete
+    </a>
+
+    <!--   
+        @if (!pet$()?.adopted) {
+        <button
+          class="w-[70px] border border-black rounded-md hover:bg-green-400 my-5"
+        >
+          Adopt
+        </button>
+        } 
+
+      <button class="w-[70px] border border-black rounded-md hover:bg-red-400">
+        Delete
+      </button>-->
+  </div>
+</div>

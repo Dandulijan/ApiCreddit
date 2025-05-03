@@ -1,0 +1,39 @@
+<div
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    background: #fff;
+  "
+>
+  <h2 style="margin-top: 0; font-size: 34px; color: #333; text-align: center">
+    {{ post.title }}
+  </h2>
+  <p style="font-size: 20px; color: #666; line-height: 1.5; text-align: center">
+    {{ post.description }}
+  </p>
+  <a
+    [routerLink]="['/posts', post.id]"
+    style="
+      padding: 8px 16px;
+      background-color: #09bc8aff; /* blue-500 */
+      color: white;
+      border: none;
+      border-radius: 10xpx;
+      cursor: pointer;
+      font-weight: 600;
+      align-items: center;
+      transition: background-color 0.3s;
+    "
+    onmouseover="this.style.backgroundColor='#004346ff';"
+    onmouseout="this.style.backgroundColor='#09bc8aff';"
+  >
+    View
+  </a>
+</div>
